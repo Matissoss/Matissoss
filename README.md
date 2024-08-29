@@ -1,3 +1,21 @@
-Hello Everyone! You can call me Matissoss. Im young game developer from Poland. I mainly use Unity and C#, but i have some basic knowledge about other programming languages. My goal is to make game development (mainly programming) something more than my hobby.
-See my creations at: matissoss.itch.io
-Hope you like my games (somehow?)! 
+## About Me
+I'm Matissoss, a GameDev/Programmer from Poland 🇵🇱
+
+Currently learning Rust, but using C# + Unity
+
+### Working on:
+
+- [ ]   Learning Rust
+- [ ]   Doing Game Jams
+- [ ]   Doing Youtube Videos
+
+### Links to Socials
+|
+[My Itch.io](https://matissoss.itch.io)
+|
+[My Twitter](https://x.com/@matissossgdev)
+|
+[My Youtube](https://www.youtube.com/@MatissossGameDev)
+|
+[My Soundcloud](https://soundcloud.com/matissossgamedev)
+|
