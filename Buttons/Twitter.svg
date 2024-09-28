@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="250" height="50" viewBox="0 0 250 50" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="path_1" d="M250 0L250 0L250 50L0 50L0 0L250 0Z" />
+    <rect id="rect_2" x="0" y="0" width="250" height="50" />
+    <clipPath id="clip_path_3">
+      <use xlink:href="#rect_2" />
+    </clipPath>
+    <path id="path_4" d="M27 0L27 0L27 24L0 24L0 0L27 0Z" />
+    <rect id="rect_5" x="0" y="0" width="27" height="24" />
+    <clipPath id="clip_path_6">
+      <use xlink:href="#rect_5" />
+    </clipPath>
+  </defs>
+  <g id="Twitter" opacity="1" clip-path="url(#clip_path_3)">
+    <g>
+      <use xlink:href="#path_1" style="fill:#000000;fill-rule:evenodd;mix-blend-mode:normal;" />
+      <g>
+        <g id="x-social-media-black-icon" opacity="1" clip-path="url(#clip_path_6)" transform="translate(112 13)">
+          <g>
+            <use xlink:href="#path_4" style="mix-blend-mode:normal;" />
+            <g>
+              <path id="Shape" d="M21.264 0L25.404 0L16.3592 10.1663L27 24L18.6681 24L12.1427 15.6097L4.6759 24L0.533092 24L10.2075 13.1262L0 0L8.54292 0L14.4416 7.66882L21.264 0L21.264 0ZM19.8109 21.563L22.1051 21.563L7.29647 2.30909L4.83483 2.30909L19.8109 21.563L19.8109 21.563Z" style="fill:#FFFFFF;mix-blend-mode:normal;" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
