@@ -1,21 +1,15 @@
-## About Me
-I'm Matissoss, a GameDev/Programmer from Poland 🇵🇱
+## 🚀 About Me
+I'm Mateus, a Programmer and Indie GameDev from Poland
+## Links
+[![Itch.io](https://github.com/Matissoss/Matissoss/blob/main/Buttons/Itchio.png)](https://matissoss.itch.io/)
 
-Currently learning Rust, but using C# + Unity
+[![My Website](https://github.com/Matissoss/Matissoss/blob/main/Buttons/MyWebsite.png)](https://matissoss.github.io/)
 
-### Working on:
+[![Twitter](https://github.com/Matissoss/Matissoss/blob/main/Buttons/Twitter.png)](https://x.com/MateusDevPL)
 
-- [ ]   Learning Rust
-- [ ]   Doing Game Jams
-- [ ]   Doing Youtube Videos
-
-### Links to Socials
-|
-[My Itch.io](https://matissoss.itch.io)
-|
-[My Twitter](https://x.com/@matissossgdev)
-|
-[My Youtube](https://www.youtube.com/@MatissossGameDev)
-|
-[My Soundcloud](https://soundcloud.com/matissossgamedev)
-|
+## 🛠 Skills
+- HTML
+- CSS
+- Basic JavaScript
+- Rust
+- Unity C#
