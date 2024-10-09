@@ -14,7 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
@@ -34,6 +33,10 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
     config = function()
       require'lspconfig'.rust_analyzer.setup{}
+      require'lspconfig'.html.setup {}
+      require'lspconfig'.cssls.setup {}
+      require'lspconfig'.ts_ls.setup {}
+      require'lspconfig'.lua_ls.setup {}
     end,
   },
   {
@@ -55,7 +58,7 @@ require("lazy").setup({
     config = function()
       require('rust-tools').setup({})
     end,
-  },
+  }},
   {
 	  {
     "hrsh7th/nvim-cmp",
@@ -89,12 +92,10 @@ require("lazy").setup({
     },
     init = function() vim.g.barbar_auto_setup = false end,
     opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
       animation = true,
       insert_at_start = true,
-      -- …etc.
     },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    version = '^1.0.0',
   },
   {
   'mhartington/formatter.nvim',
@@ -102,7 +103,6 @@ require("lazy").setup({
     require('formatter').setup({
       filetype = {
         rust = {
-          -- Używamy rustfmt do formatowania kodu Rust
           function()
             return {
               exe = "rustfmt",
@@ -114,8 +114,34 @@ require("lazy").setup({
       }
     })
   end,
+},
+{
+	"lukas-reineke/indent-blankline.nvim"
+},
+
+{
+	"folke/noice.nvim",
+	"MunifTanjim/nui.nvim",
+	"rcarriga/nvim-notify"
+},
+
+{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+},
+
+{
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
 }
+},
+})
 
-}})
+vim.cmd("colorscheme tokyonight-storm")
 
-vim.cmd("colorscheme onedark")
