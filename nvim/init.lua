@@ -1,8 +1,23 @@
 require("config.lazy")
 require("mason").setup()
-require("mason-lspconfig").setup()
-require("lspconfig").rust_analyzer.setup {}
+require("noice").setup({
+  lsp = {
+    override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true,
+    },
+  },
+  presets = {
+    bottom_search = true,
+    command_palette = true,
+    long_message_to_split = true,
+    inc_rename = false,
+    lsp_doc_border = false,
+  },
+})
 require("lualine").setup()
+require("ibl").setup()
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -42,6 +57,57 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+--
+--	LSPs and cmps
+--
+
+local cmp = require'cmp'
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<C-y>'] = cmp.config.disable,
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  },
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, {
+    { name = 'buffer' },
+  })
+})
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- Example configuration for HTML LSP
+require('lspconfig').html.setup {
+  capabilities = capabilities,
+}
+
+-- Configuration for CSS LSP
+require('lspconfig').cssls.setup {
+  capabilities = capabilities,
+}
+
+-- Configuration for JavaScript LSP
+require('lspconfig').ts_ls.setup {
+  capabilities = capabilities,
+}
+
+
+--
+--	Dashboard
+--
+
 local alpha = require('alpha')
 local dashboard = require('alpha.themes.dashboard')
 
@@ -65,14 +131,14 @@ dashboard.section.buttons.val = {
 
 alpha.setup(dashboard.opts)
 
+-- 
+-- 	Shortcuts
+--
+
 vim.api.nvim_set_keymap('n', '<leader>', ':Telescope find_files<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>r', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>p', ':vsplit <CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>)o', ':split <CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', 'f', ':Neotree <CR>',{noremap = true, silent = true})
+
 vim.g.mapleader = ' '
-vim.api.nvim_exec([[
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost *.rs FormatWrite
-  augroup END
-]], true)
