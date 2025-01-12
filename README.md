@@ -1,11 +1,14 @@
 # Hello World!
 
-My name is Mateus and I'm just another self-taught programmer with ambitions, but lacking in skill.
+My name is Mateus and I'm just another self-taught programmer with ambitions, but lacking in skill. 
+
+I'm FOSS enthusiast and from-scratch/dependency-minimal type of programmer.
 
 # Projects I'm proud [^1] of
 
-- [msat](https://github.com/Matissoss/msat),
+- [msat](https://github.com/Matissoss/msat)
 - [My itch.io games](https://matissoss.itch.io)
+- [Neovim config (not really a project)](https://github.com/Matissoss/nvim-config)
 
 # Skills
 
@@ -19,6 +22,14 @@ My name is Mateus and I'm just another self-taught programmer with ambitions, bu
 - Some Algorithms (I think so),
 - Can configure Neovim (with help of internet 😉),
 - idk...
+
+# My preferences (no one asked)
+
+- OS of choice: Linux
+- DE of choice: KDE Plasma
+- Terminal of choice: Alacritty
+- Language of choice: Rust
+- Code Editor of choice: Neovim
 
 # If you want to follow me then
 
